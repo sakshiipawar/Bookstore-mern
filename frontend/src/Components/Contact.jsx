@@ -22,7 +22,7 @@ function Contact() {
   return (
     <div
       className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: "url('/Banner.jpg')" }}
+      style={{ backgroundImage: "url('/Banner.png')" }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative z-10 w-full max-w-md p-8 bg-white rounded-lg shadow-lg">

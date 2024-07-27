@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast from "react-hot-toast";
-
 function Login() {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const onSubmit = async (data) => {
     const userInfo = {
       email: data.email,
@@ -20,12 +20,10 @@ function Login() {
       .then((res) => {
         console.log(res.data);
         if (res.data) {
-          toast.success("Login Successfully ");
+          toast.success("Loggedin Successfully");
           document.getElementById("my_modal_3").close();
           setTimeout(() => {
             window.location.reload();
-            //navigate(from, { replace: true });
-
             localStorage.setItem("Users", JSON.stringify(res.data.user));
           }, 1000);
         }
@@ -38,7 +36,6 @@ function Login() {
         }
       });
   };
-
   return (
     <div>
       <dialog id="my_modal_3" className="modal">
